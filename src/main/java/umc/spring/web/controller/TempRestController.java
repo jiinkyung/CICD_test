@@ -17,7 +17,7 @@ public class TempRestController {
 
     private final TempQueryService tempQueryService;
 
-    @GetMapping
+    @GetMapping("/hello")
     public String hello() {
         return "Hello, World!";
     }
