@@ -17,6 +17,10 @@ public class TempRestController {
 
     private final TempQueryService tempQueryService;
 
+    @GetMapping
+    public String hello() {
+        return "Hello, World!";
+    }
     @GetMapping("/test")
     public ApiResponse<TempResponse.TempTestDTO> testAPI() {
         return ApiResponse.onSuccess(TempConverter.toTempTestDTO());
