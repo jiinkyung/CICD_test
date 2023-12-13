@@ -23,8 +23,10 @@ public class FoodCategory extends BaseEntity {
     private String name;
 
     @OneToMany(mappedBy = "foodCategory", cascade = CascadeType.ALL)
+    @Builder.Default
     private List<Store> storeList = new ArrayList<>();
 
     @OneToMany(mappedBy = "foodCategory", cascade = CascadeType.ALL)
+    @Builder.Default
     private List<MemberPrefer> memberPreferList = new ArrayList<>();
 }

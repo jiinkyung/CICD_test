@@ -72,13 +72,6 @@ public class MemberRestController {
         return ApiResponse.onSuccess(ReviewConverter.memberReviewPreViewListDTO(storePage));
     }
 
-    @GetMapping("/{memberId}/missions")
-    @Operation(summary = "특정 유저가 도전 중인 미션 목록 조회 API",description = "특정 유저가 도전 중인 미션들의 목록을 조회하는 API이며, 페이징을 포함합니다. query String 으로 page 번호를 주세요")
-    public ApiResponse<MemberResponseDTO.getMemberChallengingMissionListDTO> getMemberChallengingMissionList(@PathVariable(name = "memberId") Long memberId,
-                                                                                                             @CheckPage @RequestParam(name = "page") Integer page){
-        Page<MemberMission> memberChallengingMissionPage = memberQueryService.getMemberChallengingMissionList(memberId, page - 1);
-        return ApiResponse.onSuccess(MemberMissionConverter.toMemberChallengingMissionListDTO(memberChallengingMissionPage));
-    }
 
 }
 

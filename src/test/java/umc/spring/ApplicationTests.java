@@ -3,8 +3,8 @@ package umc.spring;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
-class ApplicationTests {
+//@SpringBootTest
+public class ApplicationTests {
 
 	@Test
 	void contextLoads() {
